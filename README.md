@@ -1,1 +1,2 @@
-# Hero-section-practice
+# Hero-section-practice.
+Author : Md Tito Miya
