@@ -21,12 +21,9 @@ body::before {
   position: fixed; 
   inset: 0;
   background: url("hero.jpg") center/cover no-repeat;
-  filter: blur(0.4s);    
+  filter: blur(3px);    
   transform: scale(1.1);
-  z-index: -1;  
-}
-body::before,
-body::after {
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -38,6 +35,7 @@ body::after {
   inset: 0;
   background: rgba(2, 2, 2, 0.);
   z-index: 0;
+  pointer-events: none;
 }
 
 /* main content */
