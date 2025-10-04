@@ -18,24 +18,29 @@ body{
 /* Background blur layer */
 body::before {
   content: "";
-  position: fixed; /* scroll করলেও থাকবে */
+  position: fixed; 
   inset: 0;
   background: url("hero.jpg") center/cover no-repeat;
-  filter: blur(8px);    
+  filter: blur(0.4s);    
   transform: scale(1.1);
   z-index: -1;  
 }
+body::before,
+body::after {
+  pointer-events: none;
+}
 
-/* Optional: overlay for better contrast */
+
+/* overlay for better contrast */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(92, 92, 92, 92.); /* হালকা ডার্ক লেয়ার */
+  background: rgba(2, 2, 2, 0.);
   z-index: 0;
 }
 
-/* Your main content */
+/* main content */
 main {
   position: relative;
   z-index: 1;
@@ -100,6 +105,7 @@ h1{
  nav ul li a:hover{
   color: aliceblue;
   position: relative;
+  cursor: pointer;
 }
 
  nav ul li a::after{
