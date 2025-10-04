@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+body{
+  background-image:url(hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  line-height: 1.6;
+  
+}
+
+/* Background blur layer */
+body::before {
+  content: "";
+  position: fixed; /* scroll করলেও থাকবে */
+  inset: 0;
+  background: url("hero.jpg") center/cover no-repeat;
+  filter: blur(8px);    
+  transform: scale(1.1);
+  z-index: -1;  
+}
+
+/* Optional: overlay for better contrast */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(92, 92, 92, 92.); /* হালকা ডার্ক লেয়ার */
+  z-index: 0;
+}
+
+/* Your main content */
+main {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 200px;
+}
+
+nav{
+  background-color: rgba(55, 12, 183, 0.300);
+}
+
+nav ul{
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 8px;
+ 
+}
+
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: rgb(240, 237, 61);
+}
+h1{
+  padding-top: 200px;
+  margin: 10px;
+  justify-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.class{
+  text-align: center;
+  justify-items: center;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.class a{
+  background-color: rgb(167, 211, 7);
+  padding: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+ justify-items: center;
+ align-items: center;
+ align-content: center;
+}
+
+.class a:hover{
+  color: aliceblue;
+  background-color: black;
+  transition-duration: 500ms;
+
+}
+ nav ul li a:hover{
+  color: aliceblue;
+  position: relative;
+}
+
+ nav ul li a::after{
+  content: "";
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 0;
+left: 50%;
+background-color: rgb(255, 255, 255);
+transition: all 0.4s ease;
+transform: translateX(-50%);
+  }  
+
+nav ul li a:hover::after{
+    width: 100%;
+  }
+p{
+  margin-bottom: 10px;
+}
